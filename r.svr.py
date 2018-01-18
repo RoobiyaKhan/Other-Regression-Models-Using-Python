@@ -28,8 +28,6 @@ regressor.fit(x, y)
               
 
 # Predicting a new result
-#y_pred = regressor.predict(sc_X.transform(np.array([[6.5]])))# to make 6.5 into array,use numpy with two square brackets 
-                                          #to make it array(like matrix),if one square bracket then its vector
 y_pred = sc_y.inverse_transform(regressor.predict(sc_X.transform(np.array([[6.5]])))) #to inverse the transform(scaled values) and get the correct results
 # Visualising the SVR results
 plt.scatter(x, y, color = 'red')
